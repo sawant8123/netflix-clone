@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Netflix</title>
+    <link rel="icon" type="image/png" href="netflixicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+
+        
+        .nav-item-right{
+          padding-right: 50px;
+          word-spacing: 20px;
+          color: white;
+          font-weight: 100;
+        }
+        /* search box */
+    .form-control::placeholder {
+            color: white; 
+            font-size: small;
+        }
+
+      
+    /* body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: white;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5); Optional overlay
+    }
+
+    .content h1 {
+      font-size: 3rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+    } */
+
+        
+
+    /* card */
+    body {
+      background-color: #141414;
+      color: white;
+    }
+
+   
+
+    .card {
+      background-color: #222;
+      border: none;
+      border-radius: 4px;
+      width: 220px;
+      height: 150px;
+      gap: 5px;
+    }
+
+    .card img {
+      border-radius: 4px;
+      height: 150px;
+      object-fit: contain;
+    }
+    .hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+
+    
+
+      
+
+
+
+    </style>
+  </head>
+  <body style="background-color: #1e1e1e; font-family: 'Inter', sans-serif">
+    
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="font-size: small;">
+        <div class="container-fluid ">
+          <a class="navbar-brand"  href="home.html"><img src="Netflix_Logo.png" alt="netflix" height="40px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+           
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="tvshows.html">Tv Shows</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="movies.html">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="n&popular.html">New & Popular</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link text-light" href="browsebylang.html">Browse By Languages</a>
+              </li>
+            </ul>
+
+              <!-- button icon -->
+              <div class="search-container ">
+            
+                <div class="search-box  me-3">
+                  <input type="text" class="form-control " placeholder="Titles,people,genres.." style="height: 30px; background-color: #141414; color: aliceblue; ">
+                </div>
+              </div>
+      
+              <div class="nav-item-right">
+                <i class="bi bi-bell  fs-6"></i>
+                  <img src="video_files/AAAABStlS0MPUGcy6Ovyeia-3ddnnXNb2Lri4P4H4QCFuR_yaGs0umyqHUDOZcOBKF8MFUGHX07txAW70z7wq_S9AKGQ_MixrLQ.png" alt="">
+              </div>
+
+            <!-- button icon dropdown -->
+            <!-- <div class="dropdown-btn">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="bi bi-person-square"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+<!-- Overlay Content 
+      <div class="video-background">
+        <video autoplay muted loop>
+          <source src="vide.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    
+      
+      <div class="content">
+        <div class="text-center">
+          <h1>Welcome to My Website</h1>
+          <p>Enjoy the immersive full-page video experience</p>
+          <button class="btn btn-primary">Explore More</button>
+        </div>
+      </div> -->
+
+      
+      
+      
+
+         <!--cards row 1-->
+         <div class="container">
+          <div class="text-light">
+            <h4>New on Netflix</h4>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5">
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbB1dhuX007QZEWUW-ujaM7euz9JavBaYN3gYU-pY1Xa9BZ5_B6-B-JkYwm69ml4SUBHlMAmWRu4P9vIH3j6x3Pv4emZmjHZTh2KwOKktE5YqhfH9Krdb_HqhIlpYO-fpDc6fSSp2bDlg0aOfoy-n7J0XiJxJ8U4F_cTbJBY0rpBxO2ao0b3JCtjohX7zP1dhBhAmsr4JgnKdS0LHud25iYm2aG7-kzUcYhMEsQBZ2asqJNZqv87eDaWtC2soq5Nw3Rtn-Ej3jujiSt1OuEFQbg2k9xzciy4h9lLFdfHZXxydJLeryXpaLa6_29pr9r89Xa2WMhifkA_cMLi1MQpup_IOzbU-g1UQgKqCxBhkx0dGwdhMM-DcEBl3gGzmBSwNAJANZqyGeKFKc1E6rlwiluEDQ3C2b5vP4cUX6wEyGp7yVIct-WiqTFp0ExJ3A7Xmo8CXgnOwdNTa3LJCRDkNi9xFDIYcvFLMFxfTEvSR6U80EcOy2bhLb3ggr9TtuvFulA.jpg?r=d9f" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTBxpRFsP3puRrM2GwXDLCeMsFb78v-WpfKMBjpgE7kEPmP_BP_KyuGB5CNsAg_sQWDfSFrVVHAiuq34G_WA7_AFBK59EoaDYtFEaviOTD8gzNZtJAxPnSj6tVDdrIiDsoNDiIfrBerVvtVtwzYT0NmZ_VhlNeXE04w.jpg?r=818" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXXfS81fWF89PwSeOI4SdXMZgvhMgp9WuEipE2MNs_m5bpV0NaxhWrWby64T0k-VTnv4vrhR4UJRxrfDK1DChRgJKR67jblLgZV32yL_mtSILLAQi-6K41myojWlKs2HIYTk3PPqmS63SRn1moH6GeNRP1dDjeQou6rDiMpscGcJjSIeNP7aQkFfDeeCgZ5MlqOl1bMiIG2SGllCesQ-M7Ik9LjwOkKkpe5O7TYgBi-B8Hi8piCuHLzNEbKKSLGWTUWAk_4-C-1XMZ4Qdtl6rUaFFc4VWyKlqgOpGgMlyeBNgiF2Tc9erAWZzImIi84z3sRaPflow-vSnOLM3vGXzjYwyDa2Tjrcrqho6eGDNds71Q.jpg?r=d8a" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbNHjRwx6oRH68GL891g3ydaCiC10Ky2Gx3HAtqYLUwZGH9OHLsNoDAhUxYtbfXSHameZt5JbwFLOVgXy_7OHt6ugOgDxEhvY7w2Wolp1Dwst5j_wFgtbOSGmMqAkYdSJr_qLe7TUVWqnJO3tu9E5A6CjwZSPTM3fPFKxFl0WWRdYA0zBHZTZTdhS4Qloso.jpg?r=f28" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdeR9LG21LbkW_oVuix56hZrQokJfjCQYd6hTsvLh2tqM5VIbeZcxJjG6xHoRxXbKgw3tU1CTfnH3R2fyM856zNBw2It34QCgTuMhfIexFMVaHXw33ODTg03bEgzQgdXQSVTR03yjJec3X1RLZkJleNbVEeiHbYnYPU.jpg?r=42b" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcPLvqfpF5BvTVSyMuhbLq1W5UKyBCVfh1tZVs88Q8ENoVCZLto2LAIw5qrOVBz92rGqrWffgx9TXcwEOSTLtZk5Uir80wVaT1Ni71wsR_FXso4BQbxPqkCjuiHoIdBcVs1G_qgGwjALo1u6xmZvSp1lVfQNpDeAOdc2FOylopdCTgqcLMHfaWTaTK4O31I.jpg?r=03f" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+
+         <!--cards row 2-->
+         <div class="container">
+          <div class="text-light">
+            <h4>Coming Next Week</h4>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5">
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWWe-NP1wN8iyIWb62Xz34VLqn7JfUr0tSc5dsK2K31wvOatIUBF82mRwDwtPjLGcH6CwAoMkcF1XFwGo8oyful_4kIxPo78GXM9Q39rpQgPEJOLfQ94gMh_6pWE_Uhh1FqFpbJCjQcrN315oGs_kVquB9Swf-VHVKEXfWvIRZcqJ17ySjPJ_tYEGGq0mMBWFMNa5UjPyOdrkbQiLL2HxDBp_xodt7oR5VgT7BdZABktZZbqtBOiLeoh4ilmJxculqbenx_D1heSBanzF0t7ynUKKFN83jQWP7ejAO_iQOkI36A2aXMR82TZ1SpmfwJ-yMUZSuSDFO4buRdL_R7T_g9_uLCe1w3CzjbQK8T7c9SdV-zVWjDyJxcoUY7vkW3JqU1Lk2ZLtI__6HGIvPz7qWOVTRd5jTGwTUKLf_Jd2nNGaVWffPFqGTwJmg.jpg?r=6b0" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYWQllanrZ2_HqS9WvxtZug0Tt0qvkVHHvNd0dPl5Dd5dYr-zFWfacCxjRDb74h45i99OSFdjrvTgtQWlry5G2LEmBdZTvrsa4cj4ceV70vAYx2aVZYmoYfCBtdIv_DhPfTB.jpg?r=db5" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABatfMDuSZ4lC9JURSZrVnjXVUrZNRPhmusxyTVjKcJpYKbDFmo4_uajkEFabo24g7DUOW2S0nj8wQji1pcAeH50mLj5izKlggIk.jpg?r=cea" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTN7sIPmTFSbkVtIYy3lQZr6aIem1nfloCgzWyIdXqauFo6eO9vzz4lXGRhFJSANuVGNHHEXtMvGELnktL9A_hN0Bqoz7B6IBAU7p4IGfKLS2Q71y993Qilc_ndcXAn_GD6Z.jpg?r=71d" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeKKGdkeBa2M2g-Pg8yaCTe-6d-Keuk04U4_ygmPq8A4UXaJEKN4pkkFWSp3VpTnlpOFTsJw2eBSitdYqC3w4lte40lkqB1VCy8.jpg?r=40c" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe3_QFFR4oCobUIj_roTeymFJqNRTYM2X3qcly-0H5HJT6wtRCgJoJmAlWy8rVIoNYqaZByuZjy7s07dK8ksRVqC-cr4islrvN2PKgvUIlnAdrT1NJM-tCQmYkts9LVJQofi.jpg?r=f45" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+
+         <!--cards row 3-->
+         <div class="container">
+          <div class="text-light">
+            <h4>Coming This Week</h4>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5">
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWuXQezCha-hLQjHXFCzhE762lbtJRuWENlQhqGF9H_798IAZTX2g2Y1TEdn5UGJqFustHbGC_F1WCvf_lRN5rRE3fSiJLwW6Bw.jpg?r=1c6" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABULNuJyFI3owC58SFraAN61gkW9X4gpH6Za2KaQhM_VQOK5NlnSkEAeKnCf64A3xnQP0JfwGulzKEWQiJXZBv3waZdito0hqHTk.jpg?r=b06" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZaLZcH10BsK1z2sdvpj4OO6ozcmZKCSwHctcPBpeF133xm0RdWFP6KPx02Wtuf5_-Y_yQLwGRebJO8G3sQN5vd4xol3-SzbV2SB1bw-V19VdEmd3L_viU-2hS6qlQKyRY0c.jpg?r=f3d" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWxnH8sLRbZucizBIAyUMdjqG9XaVqlKq78-woocb_cF5U9yVGjbqMQaLrDjbZ8ZS8XlRATzbDXyQimpbQcAKZcigpUWdOMldMFe2L0Hu4AYd3foK0gE58GFzVis2ojqRInu.jpg?r=69c" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTsAl0u8Whhf5x_ecCNWHSKOP3vIED3ZWWItORM2DoouIg84VZuhfZcVQtPOOXjhIboGlbM6eqoEdOqPVWobARtDYDBHVQPv1hMjGtJWq1sV6H_Q4ByjZCLqf2t_DrXmNZfk.jpg?r=9f0" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd3L-D-i9jlqwM3Z_gEfo0OxoQPL0fNl_DAgZgo8oTeQu8zTl2imtmi0zrF5IUzIs34SQvwgQa1rskovakAzG5Q6PRmmkFNO1vN74-_kT8MKNIH2DZj9cC0HxGN_9xefVHI1.jpg?r=c1a" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+
+         <!--cards row 4-->
+         <div class="container">
+          <div class="text-light">
+            <h4>Worth the Wait</h4>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5">
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSnhuXXgOnrQ2UM6uGMTy2rW2-ItwQcYU7EGVgCuxOcspcOGqg3IaOKrm7WgVewItDbg3rZOfvD4vbjsXVPeSqpUDqs8AAC_Gi1A0YYYuQA9_OE62tNLExk0jTpimdT2bvEf.jpg?r=fc0" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVx08FjAqbSX4lP9_ntIM836_9dIRAQdPqaDkleVeEHbhLRX7XIAatv399mS_3qywubxXgxoRuT9etGX5cvnnMl_kAp4ktSogf8_gS7v17n2w1Z01rrzGSVMTRnRjT6TpmSK.jpg?r=165" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYqhdn2KM_pw-0ElUcEcw462kxagQ7L8kKIAfKkKMEfIVue1_RHqm9lvLZITH1ksPQZ_tz35AHpJFoblGUbKOX5ReTtBJr0iOh3sVP7MzJr3S3KiigKo9lUQYMop-07FZwHb.jpg?r=7ac" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYWgNaYZ80t0pULV0WaA66_1A3u050Vqp0tTX6CGkTR_EHe65RiOLOZSzicyHMGLgE2zkTUMyVq8GS8vldwI4q-8FRvvGKaLG6N0DQ6_FssCe8F7Bz8KWg8ck19cWXdMh_Mi.jpg?r=1e4" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfnMxH_xnQBQGmrVWuJDzKmstFP4wFlSDtHScQse_aVGCPXSnjZOAaVN-yVscqoLZs-LH9_rjdPE7x4GaHLCdIZTbUGrAOWzCrM.jpg?r=bfb" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card hover-card">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWEJPLpDvi4kqNYQsc3-QoaQ4bI-xRg7miCT0z1rugkCErHH1_gZxm064MZ1dKT5pRFALWQskaPQuYH67TpW3xBeNEo5sN6iNrwzb-zcCKupA2uR7XY-7jKd66vzWWRdQwBJ.jpg?r=875" class="card-img-top" alt="Image description">
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+
+          <!-- Footer -->
+       <footer class="text-white py-4">
+       <div class="container">
+          <div class="row">
+             <!-- Social Media Section -->
+             <div class="col-md-2 p-3 ">
+              <div class="social-icons">
+                <a href="https://www.facebook.com/NetflixIN/" target="_blank"><i class="bi bi-facebook text-white me-2 fs-5" ></i></a>
+                <a href="https://www.instagram.com/Netflix_IN/" target="_blank"><i class="bi bi-instagram text-white me-2 fs-5"></i></a>
+                <a href="https://twitter.com/netflixindia" target="_blank"><i class="bi bi-twitter text-white me-2 fs-5"></i></a>
+                <a href="https://www.youtube.com/channel/UCZSNzBgFub_WWil6TOTYwAg" class="fab fa-linkedin-in" target="_blank"><i class="bi bi-youtube text-white me-2 fs-5"></i></a>
+              </div>
+          </div>
+          </div>
+        </div>
+
+          <!-- Quick Links Section -->
+          <div class="container">
+            <div class="row ">
+            <div class="col-md-3">
+                <p><a href="https://www.netflix.com/browse/audio-description" class="text-white text-decoration-none">Audio Description</a></p>
+                <p><a href="http://ir.netflix.com/" class="text-white text-decoration-none">Investor Relations</a></p>
+                <p><a href="https://help.netflix.com/legal/notices " class="text-white text-decoration-none">Legal Notice</a></p>
+            </div>
+
+            <div class="col-md-3">
+                <p><a href="https://help.netflix.com/" class="text-white text-decoration-none">Help Center</a></p>
+                <p><a href="https://jobs.netflix.com/" class="text-white text-decoration-none">Jobs</a></p>
+                <p><a href="https://www.netflix.com/Cookies" class="text-white text-decoration-none">Cookie Preferences</a></p>
+            </div>
+
+            <div class="col-md-3">
+                <p><a href="https://www.netflix.com/redeem" class="text-white text-decoration-none">Gift Cards</a></p>
+                <p><a href="https://help.netflix.com/legal/termsofuse" class="text-white text-decoration-none">Services</a></p>
+                <p><a href="https://help.netflix.com/legal/corpinfo" class="text-white text-decoration-none">Corporate Information</a></p>
+            </div>
+
+            <div class="col-md-3 ">
+                <p><a href="https://media.netflix.com/" class="text-white text-decoration-none">Media Center</a></p>
+                <p><a href="https://help.netflix.com/legal/privacy" class="text-white text-decoration-none">Privacy</a></p>
+                <p><a href="https://help.netflix.com/contactus" class="text-white v">Contact Us</a></p>
+            </div>
+          </div>
+        </div>
+
+           
+        
+       
+
+      <!-- Copyright Section -->
+      <div class="copy-right text-start text-light p-4">
+        <p>&copy; 1997-2024 Netflix, Inc.</p>
+      </div>
+     </footer>
+
+         
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

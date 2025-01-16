@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netflix</title>
+    <link rel="icon" type="image/png" href="netflixicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+
+        
+        .nav-item-right{
+          padding-right: 50px;
+          word-spacing: 20px;
+          color: white;
+          font-weight: 100;
+        }
+
+        /* search box */
+    .form-control::placeholder {
+            color: white; 
+            font-size: small;
+        }
+
+    /* nav */
+    .dropdown-menu {
+      max-height: 300px; /* Adjust height as needed */
+      overflow-y: auto;
+      background-color: #141414;
+    }
+
+    /* Optional: Add scrollbar styling */
+    .dropdown-menu::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    .dropdown-menu::-webkit-scrollbar-thumb {
+      background-color: gray;
+      border-radius: 4px;
+    }
+
+    .dropdown-menu::-webkit-scrollbar-thumb:hover {
+      background-color: black;
+    }
+    
+
+    /* card */
+    body {
+      background-color: #141414;
+      color: white;
+    }
+
+   
+
+    .card {
+      background-color: #222;
+      border: none;
+      border-radius: 4px;
+      width: 200px;
+      height: 150px;
+      gap: 5px;
+    }
+
+    .card img {
+      border-radius: 4px;
+      height: 150px;
+      object-fit: contain;
+    }
+
+    
+    .hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+    
+    
+
+      
+
+
+
+    </style>
+  </head>
+  <body style="background-color: #1e1e1e; font-family: 'Inter', sans-serif" >
+    
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark " style="font-size: small;" >
+        <div class="container-fluid ">
+          <a class="navbar-brand"  href="home.html"><img src="Netflix_Logo.png" alt="netflix" height="40px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+           
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+              <li class="nav-item">
+                <a class="nav-link active text-light"  href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="Tvshows.html">Tv Shows</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="movies.html">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="n&popular.html">New & Popular</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="browsebylang.html">Browse By Languages</a>
+              </li>
+            </ul>
+
+              <!-- button icon -->
+              <div class="search-container ">
+            
+                <div class="search-box  me-3">
+                  <input type="text" class="form-control " placeholder="Titles,people,genres.." style="height: 30px; background-color: #141414; color: aliceblue; ">
+                </div>
+              </div>
+      
+              <div class="nav-item-right">
+                <i class="bi bi-bell  fs-6"></i>
+                  <img src="video_files/AAAABStlS0MPUGcy6Ovyeia-3ddnnXNb2Lri4P4H4QCFuR_yaGs0umyqHUDOZcOBKF8MFUGHX07txAW70z7wq_S9AKGQ_MixrLQ.png" alt="">
+              </div>
+
+           
+
+            <!-- button icon dropdown -->
+            <!-- <div class="dropdown-btn">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="bi bi-person-square"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg " >
+        <div class="container-fluid ">
+          <div class="text-light">
+            <h2>Browse by Languages</h2>
+          </div>
+          <div class="text-light" > 
+          select your preferences 
+           <div class="btn-group">
+            <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Original language
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Original language</a></li>
+              <li><a class="dropdown-item" href="#">dubbing</a></li>
+              <li><a class="dropdown-item" href="#">subtitle</a></li>
+            </ul>
+          </div> 
+          
+
+            <div class="btn-group">
+              <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                English
+              </button>
+              <ul  class="dropdown-menu dropdown-menu-dark ">
+                <li><a class="dropdown-item" href="#">Indonesian</a></li>
+                <li><a class="dropdown-item" href="#">Malay</a></li>
+                <li><a class="dropdown-item" href="#">Turkish</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Japanese</a></li>
+                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                <li><a class="dropdown-item" href="#">French</a></li>
+                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                <li><a class="dropdown-item" href="#">Korean</a></li>
+                <li><a class="dropdown-item" href="#">German</a></li>
+                <li><a class="dropdown-item" href="#">Mandarin</a></li>
+                <li><a class="dropdown-item" href="#">Italin</a></li>
+                <li><a class="dropdown-item" href="#">Portuguese</a></li>
+                <li><a class="dropdown-item" href="#">Cantonese</a></li>
+                <li><a class="dropdown-item" href="#">Dutch</a></li>
+                <li><a class="dropdown-item" href="#">Filipino</a></li>
+                <li><a class="dropdown-item" href="#">Polish</a></li>
+                <li><a class="dropdown-item" href="#">Tamil</a></li>
+                <li><a class="dropdown-item" href="#">Telugu</a></li>
+                <li><a class="dropdown-item" href="#">Thai</a></li>
+                <li><a class="dropdown-item" href="#">Marathi</a></li>
+              </ul>
+            </div>
+        
+            sort by
+            <div class="btn-group">
+              <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Suggestions For You
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Suggestions for you</a></li>
+                <li><a class="dropdown-item" href="#">Year Released</a></li>
+                <li><a class="dropdown-item" href="#">A-Z</a></li>
+                <li><a class="dropdown-item" href="#">Z-A</a></li>
+              </ul>
+            </div>
+            </div>
+            </div>
+          
+           
+          
+
+
+
+           
+
+            <!-- button icon dropdown -->
+            <!-- <div class="dropdown-btn">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="bi bi-person-square"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+      <br><br><br>
+
+
+      <!-- card 1 -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5">
+        <div class="col">
+          <div class="card hover-card">
+            <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaVDqj4hV54pXE9HQvuSSlImdI491E8C5hWOJa-Wje1y7pvNDtpdVv_eCwiy_sTtGh6Co9UeMyEFfh-lLnm-ijXEGYz905ndtymYtrLQnTWwiwRP7pI2YKAYsZtjBVsqATehLCynM7fpQrmGE12h0TIEQnV9FXu5bNYSUKLybuGvbsEhSXYG4BmQ_C7bU64iqu8SvQPiMMW5Q43DT_nqa9ByFjBLq4s0wLL0ku7C5IHHP6RbQhLe041-QEYA5LJhc-F7P1brd2EOhqxk4FvjybjavaGqECkaRjQZB6FERHkLsTsvz7BQAaQ3zFoYITJ_Wu0KlItP5O4fKET-hpW4AUVljSlPkvClBzPeQoKyFrUcZiq9fQY.jpg?r=03f" class="card-img-top" alt="...">
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card hover-card">
+            <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXkHqFi2L6rVxrL9bOdVxlKB7TKkfcKiu11ugNy7b7V8Rf3fJNsVjCOKI1cDkTEbH-5lyg3wVQul9Q0WNb5nZQw1X15ZdJfj4sqCBw3jGDWS4oG-bM1ZAKW5EZGP7NDeN5-I0iFTht57BdKORU-D_5F3H1seKV-8A22e_7yDzKek0LmzHW_y7WUzFfmnWNkdvoxDPWB9M4rtHLJWEHjl8_2oJLT99ZrJMqXC3xlxZu5N31amXdbGJyAtrC1xH_WpidZkpU41UdcpQhwjAA4NM3Hm91rgYhjfYZ2JICrFTofYHXWbu3ZIFZ3Ita0KpFWBA-6mC_106_Wy5N3AeVmvFaW9mjSqUDHqFXC-fRMZc3qY65bEUF8.jpg?r=f28" class="card-img-top" alt="...">
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card hover-card">
+            <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUp-5WpquoZIM3viteFY8hauNnNp9wHMGjups4xPww6JSRQmzBHfm_Hbj848SCg1r1jCQYHzBn5ezAJ_IgJylUpyo30FCTmNSoj8aq4bOyDeORVbP6OSe5gQn9EA8TH1hJbr.jpg?r=0f5" class="card-img-top" alt="...">
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card hover-card">
+            <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYvftsjKNvNdy96k6sN_kQaveQVGBYwYO_Z2q7qv4pTpAkjmyowRzgXGKdxc81l_iMmOR72-zlh0zmVu-jRJimJpwFCjxbCHkoyJZcurqPINDiuL_BNwGksJKFcQw28uBZ13.jpg?r=316" class="card-img-top" alt="...">
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card hover-card">
+            <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVmBW03marROBTHUH8sFnrkWais2RjK7sJIGFCiGodjS6RU5MAexM81AMFwSu-AiV6vbynHymCHW754J47nVzt5fPjNphrk0kTy703jJqJKxMLYeTIsa3Y8ve_qbzCP5peNB.jpg?r=59f" class="card-img-top" alt="...">
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card hover-card">
+            <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa2E5R-e4lfThF594AFLhOdp-rPfSeOQllzPOv_on4A8m26zlhBoDT0cCVxjj7FCF5n2kqeCOtPeYmSp0GEiOXPao_Vild5FdTY.jpg?r=705" class="card-img-top" alt="...">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+      <br>
+
+      <!-- card 2 -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5">
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeBbcP37NmYJcGFTV03hYw_8BVQdjnTKVgSTw4EM2l9qnDlTaKQbGkMVp2lfx1lQ_tj_r-WDz31F_aVh_0yav4DCFAp_aIXnKg77WJWN3T4BgP-qZpryUUAll76oTnH8lfk4.jpg?r=ad5" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZPRqz1UCuUNQhN6PVtOC8OlJGUHrVkCaJCybVZT7mb6I-_8yuqFLAOwRYzR3Nl94OrpDZUCNT8SPzFINas5AVkAJTzf5b66yQDXo93OH0kpRovBvaNa-ZRz53m2Rr88usi1.jpg?r=cca" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWhDAI7MZGpcCLPnfgcUS9iZwh0nvk38b-2YYS5jEIrvTgqkfZdF216pCrkX7gXPzCt82C7n3XQf60R2tSMtNleYNMVEEgyGj6qK4ZaktsHorvrFx6-1pikxxFocSQ4p_qT3.jpg?r=fef" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYkgoseD_TOHDLSjIGLHiekygHJvAajW9ZttnvPJI60gRQVMlE9nhMNYPT3WI3BF9DIzkJrEONtWLUwUsSF6W1aV3OfSTmzfY8v9j1P35_hyOM8MiUekrJ1JXCYyk6ZN-4PC.jpg?r=4d2" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQZ82Fsg70Z4zb2QbzcmUFXQY0KAtJi6Ojj3qmghN6l5GT28Bf8uAye7uwrgQvd64VOJLoy01-QSdzIQa91sYyVySRrWys50KRcJONCSmQe25r--GIZ5vnh43I6U_tku_5Ne.jpg?r=d7b" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQgOoTA-tTgO4T9GwQs2NcT0wfiXaJty9nLPZwk6oStJV9Jq3eS4LXGrVwg4S30Qo4tVP-pkfbJeHt0UewsgB3DC6AbIpgOsDIPaVmQb2X5cbIb--4Uw9_KlmUJCMbKYLUlV.jpg?r=501" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+       </div>
+      </div>
+       <br>
+
+       <!-- card 3 -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5">
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdYtHt54FGPvQevz30zWNH0K3ZImfdCxVaHVaaRsH_lmCkctpLBF8m2ljrsEwkwHBiq0HS17ToGOu07Ep5lsAOK3d_G9vV3LaXxaY6azQqXaFGoq5o6ZiVX7zINjHXphBzua.jpg?r=668" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABRNHrkRrJMIRSNQnSSqpC2MXPVfR5j8aMPMjBKXu9PWTPMQ72uf9uTLi2O3mGFnGJhSK-Lo6bPQDyxPmrutp1djxLNDALW9taFU.jpg?r=818" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa1x0iu8mUbkvj7_7ocv0nLzFwNgN6aZbViKxCq4prlY9pwFo7U7Ik6B2I0q07EryjOJt-H4x3MKY0gQiP6_bQA78vcUU4CKPfTCWPg_fwVT409q_GBOOZXuaZiQGbTIoCfK.jpg?r=165" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTxvzAy3kJozcSlqS-s_0FjBYQYPII7MgjJSLFoFA8hIMfteOXP-BnMX2I8WmnutD70RA_CYSk4Hu59hmRoQo4tVNrkkzhlfq27Ce2oIoGNnC22M_e2xE0mUucMfIkvXU1IP.jpg?r=4a3" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABT3lCjopJH5Gfwo5F75TAdy-04s6nAg0BaX0DKEwiB4KuCdcJOT9izityohqsrPJ2d80I_IyF-MeQdvprHJh4SAtTeVmi7nbGzk.jpg?r=820" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQH4k1Uabr16qZErE3_r2kt4hGHlUFbHHeyHJ6zI9OYa8keOFINabdt9aR_iJT6CemhASR26kGxMXkDbkEPFncp45UjYhF5aa9o.jpg?r=148" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+       </div>
+      </div>
+       <br>
+
+       <!-- card 4 -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5">
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdIXi2doSp78r2v6MRCSQkn07DL7FnSwIcKqqA3Dno8DDttXrAhH0JyR3ODIisARrs6e79rV_7aX1wcoQJZLHihMDfipWsqvY4LlCs5UrGsPJzMBC186AXHj1BGZMWxAAQap.jpg?r=e7c" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUVt9IxV9XN14gGG-anzSKAqmDn8RCsZQHA4ppBqVedzlJBgA1CMrBCGXQDOuVUBgoHlh1Wzhn-E8yFTSGowYq3IBuuc75DodUY.jpg?r=e28" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABR8zNhdN01is1386q7nANx2o0LWQqpcQUW_z_nr-FgNc17QVAn6yixL_wIsQua3Tc9pvnWRlPswYeaBqoGRTaTmNV3xz1fSsqNVis9Qu36VyMZ3vbQVrRJup6SAgqE_cgjZH.jpg?r=185" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABekg-IJUVbNRGNCFjdunLBC3GvdToCDDd6cf0pEG3sGT74_AGzUs9qGsVUJIRBdqcFZVoPm7cP9Nr06DKAFoxu1KET7aotdKAUS1Jyv-VQglR-Ovsye0fjmSZYxszlsE3BHM.jpg?r=5c5" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABV6-E4pOqgumctnXk6FH38ik8aCSTojhGSzHajVhvewM1_wVn1w9IQMb7e7pzltLjnQCLjePxKQXQ_lbx0KHSw9YK3umSz1YU30.jpg?r=280" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <div class="col">
+           <div class="card hover-card">
+             <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbrOwQTEwnixbkjNMHln4zFsZPZkE0BGZHMogP5d7MdN0DZiwBKh2VP4w1hB-_V_19BFtvT3WCebgT6C7a7RUfdW1yw4lEFAz-ep18V0RmbNz42i22gCUCsX-VwCyz0JXvj1.jpg?r=eb8" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+       </div>
+      </div>
+       <br>
+      
+      
+        
+      
+      
+   
+
+      
+        
+
+          <!-- Footer -->
+       <footer class="text-white py-4">
+       <div class="container">
+          <div class="row">
+             <!-- Social Media Section -->
+             <div class="col-md-2 p-3 ">
+              <div class="social-icons">
+                <a href="https://www.facebook.com/NetflixIN/" target="_blank"><i class="bi bi-facebook text-white me-2 fs-5" ></i></a>
+                <a href="https://www.instagram.com/Netflix_IN/" target="_blank"><i class="bi bi-instagram text-white me-2 fs-5"></i></a>
+                <a href="https://twitter.com/netflixindia" target="_blank"><i class="bi bi-twitter text-white me-2 fs-5"></i></a>
+                <a href="https://www.youtube.com/channel/UCZSNzBgFub_WWil6TOTYwAg" class="fab fa-linkedin-in" target="_blank"><i class="bi bi-youtube text-white me-2 fs-5"></i></a>
+              </div>
+          </div>
+          </div>
+        </div>
+
+          <!-- Quick Links Section -->
+          <div class="container">
+            <div class="row ">
+            <div class="col-md-3">
+                <p><a href="https://www.netflix.com/browse/audio-description" class="text-white text-decoration-none">Audio Description</a></p>
+                <p><a href="http://ir.netflix.com/" class="text-white text-decoration-none">Investor Relations</a></p>
+                <p><a href="https://help.netflix.com/legal/notices " class="text-white text-decoration-none">Legal Notice</a></p>
+            </div>
+
+            <div class="col-md-3">
+                <p><a href="https://help.netflix.com/" class="text-white text-decoration-none">Help Center</a></p>
+                <p><a href="https://jobs.netflix.com/" class="text-white text-decoration-none">Jobs</a></p>
+                <p><a href="https://www.netflix.com/Cookies" class="text-white text-decoration-none">Cookie Preferences</a></p>
+            </div>
+
+            <div class="col-md-3">
+                <p><a href="https://www.netflix.com/redeem" class="text-white text-decoration-none">Gift Cards</a></p>
+                <p><a href="https://help.netflix.com/legal/termsofuse" class="text-white text-decoration-none">Services</a></p>
+                <p><a href="https://help.netflix.com/legal/corpinfo" class="text-white text-decoration-none">Corporate Information</a></p>
+            </div>
+
+            <div class="col-md-3 ">
+                <p><a href="https://media.netflix.com/" class="text-white text-decoration-none">Media Center</a></p>
+                <p><a href="https://help.netflix.com/legal/privacy" class="text-white text-decoration-none">Privacy</a></p>
+                <p><a href="https://help.netflix.com/contactus" class="text-white v">Contact Us</a></p>
+            </div>
+          </div>
+        </div>
+
+           
+        
+       
+
+      <!-- Copyright Section -->
+      <div class="copy-right text-start text-light p-4">
+        <p>&copy; 1997-2024 Netflix, Inc.</p>
+      </div>
+     </footer>
+
+         
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
